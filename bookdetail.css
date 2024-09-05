@@ -1,0 +1,129 @@
+/* Reset básico para margin y padding */
+
+
+html, body {
+    height: 100%; /* Asegura que el contenido ocupe toda la altura disponible */
+    overflow-y: auto; /*Permite hacer scroll cuando el contenido supera la altura de la pantalla */
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5b89d;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #f5b89d;
+    position: relative;
+    flex-grow: 1;
+}
+
+header {
+    background-color: #e08e7e;
+    padding: 15px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.book-background {
+    position: relative;
+    height: 30%;
+    overflow: hidden;
+    margin-top: 20px; /* Ajusta según la altura del header */
+}
+
+.book-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.book-details {
+    background-color: white;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    position: relative;
+    top: -20px;
+    z-index: 1;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.book-cover {
+    width: 120px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.book-info h2 {
+    font-size: 1.4em;
+    margin-bottom: 8px;
+    
+}
+
+.book-meta {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.book-meta span {
+    font-size: 0.9em;
+    background-color: #f5b89d;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f5b89d;
+    position: relative;
+    bottom: 0;
+}
+
+.return-loan-btn, .get-loan-btn {
+    background-color: #e08e7e;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 48%;
+}
+
+.return-loan-btn {
+    background-color: #9e9e9e;
+}
+
+.get-loan-btn {
+    background-color: #e08e7e;
+}
+
