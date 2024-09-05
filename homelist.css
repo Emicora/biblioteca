@@ -1,0 +1,118 @@
+/* Reset básico para margin y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5b89d;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #AD6666;
+    padding: 15px;  
+    text-align: center;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+}
+h1 {
+    color: white;
+    font-size: 1.5em;
+}
+
+.loan-item {
+    display: flex;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    background-color: white;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.loan-item img {
+    width: 70px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.loan-details {
+    margin-left: 15px;
+}
+
+.loan-details h2 {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+.loan-details p {
+    font-size: 0.9em;
+    margin-bottom: 4px;
+}
+
+.rating {
+    color: #ff8c00;
+    font-weight: bold;
+}
+
+.bottom-nav {
+    background-color: #AD6666;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.bottom-nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-link i {
+    font-size: 24px; /* Tamaño del ícono */
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+
+@media (max-width: 768px) {
+    .loan-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .loan-item img {
+        width: 100px;
+        height: 140px;
+        margin-bottom: 10px;
+    }
+
+    .loan-details {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .bottom-nav a {
+        font-size: 0.9em;
+    }
+}
