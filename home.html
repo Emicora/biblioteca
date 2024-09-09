@@ -12,11 +12,21 @@
 <body>
     <!-- Barra superior -->
     <header class="top-bar">
-        <h1>What do you want to read?</h1>
-        <div class="search-container">
-            <input type="text" placeholder="Search" class="search-bar">
-            <button class="search-button">🔍</button>
-        </div>
+        <header class="top-bar">
+            <h1>What do you want to read?</h1>
+            <div class="search-container">
+                <input type="text" placeholder="Search" class="search-bar" list="book-titles">
+                <datalist id="book-titles">
+                    <option value="Cien años de soledad"></option>
+                    <option value="Harry Potter"></option>
+                    <option value="El Diario de Ana Frank"></option>
+                    <option value="Historias de Edad"></option>
+                    <option value="Drácula"></option>
+                    <option value="El amor en los tiempos del cólera"></option>
+                </datalist>
+                <button class="search-button">🔍</button>
+            </div>
+        </header>
     </header>
 
     <!-- Aquí irán las secciones de contenido -->
@@ -26,28 +36,39 @@
         <div class="book-grid">
             <!-- Libros con sus portadas -->
             <div class="book-item">
-                <img src="harry-potter.jpg" alt="Harry Potter" class="book-cover">
-                <p>Harry Potter</p>
+                <a href="bookdetail.html">
+                    <img src="gabriel-garcia.jpg" alt="Cien años de soledad" class="book-cover">
+                </a>
+                <a href="bookdetail.html">Cien años de soledad</a>
             </div>
             <div class="book-item">
-                <img src="ana-frank.jpg" alt="El Diario de Ana Frank" class="book-cover">
-                <p>El Diario de Ana Frank</p>
+                <a href="">
+                    <img src="harry-potter.jpg" alt="Harry Potter" class="book-cover">
+                </a>
+                <a href="">Harry Potter</a>
             </div>
             <div class="book-item">
-                <img src="gabriel-garcia.jpg" alt="Cien años de soledad" class="book-cover">
-                <p>Cien años de soledad</p>
+                <a href=""><img src="ana-frank.jpg" alt="El Diario de Ana Frank" class="book-cover">
+                </a>
+                <a href="">El Diario de Ana Frank</a>
             </div>
             <div class="book-item">
-                <img src="historias-de-edad.jpg" alt="Historias de Edad" class="book-cover">
-                <p>Historias de Edad</p>
+                <a href="">
+                    <img src="historias-de-edad.jpg" alt="Historias de Edad" class="book-cover">
+                </a>
+                <a href="">Historias de Edad</a>
             </div>
             <div class="book-item">
-                <img src="dracula.jpg" alt="Drácula" class="book-cover">
-                <p>Drácula</p>
+                <a href="">
+                    <img src="dracula.jpg" alt="Drácula" class="book-cover">
+                </a>
+                <a href="">Drácula</a>
             </div>
             <div class="book-item">
-                <img src="el-amor.jpg" alt="El amor en los tiempos del cólera" class="book-cover">
-                <p>El amor en los tiempos del cólera</p>
+                <a href="">
+                    <img src="el-amor.jpg" alt="El amor en los tiempos del cólera" class="book-cover">
+                </a>
+                <a href="">El amor en los tiempos del cólera</a>
             </div>
         </div>
     </section>
@@ -58,7 +79,7 @@
             <li><a href="#" class="nav-link"><i class="bi bi-house-door"></i><br>Home</a></li>
             <li><a href="#" class="nav-link"><i class="bi bi-search"></i><br>Search</a></li>
             <li><a href="homelist.html" class="nav-link"><i class="bi bi-list"></i><br>List</a></li>
-            <li><a href="#" class="nav-link"><i class="bi bi-person"></i><br>Profile</a></li>
+            <li><a href="profile.html" class="nav-link"><i class="bi bi-person"></i><br>Profile</a></li>
         </ul>
     </nav>
 
