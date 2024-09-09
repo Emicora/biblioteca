@@ -14,7 +14,17 @@ body {
     position: relative;
     padding-bottom: 60px; /* Espacio para el menú inferior */
 }
+a {
+    text-decoration: none;
+    color: #AD6666;
+    transition: color 0.3s ease-in-out; /* Agrega una transición suave al color */
+}
 
+
+a:hover {
+    filter: brightness(70%); /* Aplica un filtro de brillo para oscurecer la imagen */
+    color: rgb(0, 0, 0); /* Cambia el color al pasar el mouse por encima */
+}
 
 /* Barra superior */
 .top-bar {
