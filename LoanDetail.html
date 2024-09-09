@@ -9,29 +9,30 @@
 <body>
     <div class="container">
         <div class="loan-detail">
-            <div class="header">
-                <button class="back-button">←</button>
+            <header>
+                <button class="back-btn">&larr;</button>
                 <h1>Loan Detail</h1>
-            </div>
-            <img src="cien.jpeg" alt="libro">
-
+            </header>
             <div class="book-info">
-                <img src="book-cover.jpg" alt="Cien años de soledad">
+                <img src="cien-anos.jpg" alt="Cien años de soledad">
                 <h2>Cien años de soledad</h2>
-                <div class="book-details">
+                <div class="book-meta">
                     <span>📅 2021</span>
                     <span>📖 342 Pages</span>
-                    <span>🎬 Action</span>
+                    <span>🎥 Action</span>
                 </div>
             </div>
-            <div class="date-picker">
-                <label for="start-date">Start Date:</label>
-                <img src="Untitled.png" alt="calendario ">
-                <label for="end-date">End Date:</label>
-                <img src="Untitled.png" alt="calendario">
-
+            <div class="loan-dates">
+                <div class="date-picker">
+                    <label for="start-date">Start Date:</label>
+                    <input type="date" id="start-date">
+                </div>
+                <div class="date-picker">
+                    <label for="end-date">End Date:</label>
+                    <input type="date" id="end-date">
+                </div>
             </div>
-            <button class="loan-button">Get Loan</button>
+            <button class="get-loan">Get Loan</button>
         </div>
     </div>
 </body>
