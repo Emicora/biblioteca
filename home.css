@@ -82,7 +82,6 @@ body {
 }
 
 /* Menú de navegación inferior */
-/* Menú de navegación inferior */
 .bottom-nav {
     background-color: #AD6666;
     padding: 10px;
@@ -130,7 +129,7 @@ body {
 .book-cover {
     max-width: 100%; /* Evita que las imágenes se salgan de su contenedor */
     height: auto; /* Mantiene las proporciones */
-    max-height: 200px; /* Limita la altura máxima de las imágenes */
+    max-height: 300px; /* Limita la altura máxima de las imágenes */
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
