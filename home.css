@@ -51,6 +51,11 @@ a:hover {
     outline: none;
 }
 
+datalist option {
+    font-size: 16px;
+    padding: 5px;
+}
+
 .search-button {
     background: none;
     border: none;
