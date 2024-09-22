@@ -1,15 +1,15 @@
 /* Reset básico para margin y padding */
-
-
 html {
     font-family: 'Arial', sans-serif;
     background-color: #f0f0f0;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Cambia a flex-start para permitir que el contenido fluya hacia arriba */
-    min-height: 100vh; /* Permite que el contenedor crezca dinámicamente */
+    align-items: flex-start;
+    min-height: 100vh;
     margin: 0;
-  }
+    overflow-y: auto; /* Permitir desplazamiento vertical en el HTML */
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f5b89d;
@@ -17,8 +17,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
-    overflow: auto;
+    margin: 0; /* Asegura que no haya margen adicional */
+    min-height: 100vh; /* Solo el mínimo requerido */
+    overflow: visible; /* Permitir scroll si el contenido se desborda */
 }
 
 .container {
@@ -30,6 +31,8 @@ body {
     background-color: #f5b89d;
     position: relative;
     flex-grow: 1;
+    max-width: 1500px; /* Limita el ancho en dispositivos grandes */
+    margin-bottom: 20px; /* Añadir margen inferior para dejar espacio */
 }
 
 header {
@@ -37,9 +40,7 @@ header {
     padding: 15px;
     text-align: left;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    top: 0;
     width: 100%;
-    z-index: 1000;
 }
 
 .back-btn {
@@ -58,9 +59,10 @@ header {
 }
 
 .book-background img {
-    width: 100%;
+    max-width: 100%;
     height: 100%;
     object-fit: cover;
+    
 }
 
 .book-details {
@@ -68,13 +70,11 @@ header {
     padding: 20px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    position: relative;
-    top: -20px;
-    z-index: 1;
     box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
     gap: 20px;
+    flex-wrap: wrap; /* Permite que el contenido se ajuste en dispositivos pequeños */
 }
 
 .book-cover {
@@ -84,10 +84,13 @@ header {
     margin-bottom: 10px;
 }
 
+.book-info {
+    flex: 1; /* Permite que el contenedor del texto ocupe el espacio disponible */
+}
+
 .book-info h2 {
     font-size: 1.4em;
     margin-bottom: 8px;
-    
 }
 
 .book-meta {
@@ -95,6 +98,7 @@ header {
     gap: 10px;
     margin-bottom: 10px;
     color: #666;
+    flex-wrap: wrap; /* Acomoda los elementos en dispositivos pequeños */
 }
 
 .book-meta span {
@@ -106,12 +110,14 @@ header {
 
 .action-buttons {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Cambia a columna en lugar de fila */
+    align-items: center; /* Centra los botones */
     padding: 20px;
     background-color: #f5b89d;
     position: relative;
     opacity: 0.8;
-    margin-bottom: 0;
+    margin-bottom: 20px; /* Añadir margen inferior */
+    flex-wrap: wrap; /* Permite que los botones se reacomoden en dispositivos pequeños */
 }
 
 .return-loan-btn, .get-loan-btn {
@@ -122,8 +128,8 @@ header {
     border-radius: 50px;
     font-size: 1em;
     cursor: pointer;
-    width: 48%;
-    margin: 20px;
+    width: 80%; /* Reducir el ancho para mayor margen */
+    margin: 10px 0; /* Espaciado vertical entre botones */
 }
 
 .return-loan-btn {
@@ -134,3 +140,24 @@ header {
     background-color: #AD6666;
 }
 
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    .book-details {
+        flex-direction: column; /* Cambia a columna en dispositivos móviles */
+        align-items: center; /* Centra el contenido */
+        text-align: center;
+    }
+    
+    .book-cover {
+        width: 100px; /* Ajusta el tamaño de la portada */
+        margin-bottom: 15px;
+    }
+
+    .book-meta {
+        justify-content: center; /* Centra los metadatos */
+    }
+
+    .return-loan-btn, .get-loan-btn {
+        width: 100%; /* Ancho completo para botones en móviles */
+    }
+}

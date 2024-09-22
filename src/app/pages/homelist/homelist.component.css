@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f5b89d;
+    background-color: #F9B185;
     color: #333;
 }
 
@@ -15,6 +15,8 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    max-width: 1200px; /* Limita el ancho máximo */
+    margin: 0 auto; /* Centra el contenido en pantallas grandes */
 }
 
 header {
@@ -57,11 +59,16 @@ h1 {
     border-radius: 8px;
     margin-bottom: 10px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.loan-item:hover {
+    transform: scale(1.02); /* Efecto hover para agrandar ligeramente */
 }
 
 .loan-item img {
-    width: 60px;
-    height: 80px;
+    width: 100px; /* Ajuste de tamaño más grande */
+    height: 130px; /* Ajuste de tamaño más grande */
     border-radius: 8px;
     object-fit: cover;
 }
@@ -72,12 +79,12 @@ h1 {
 }
 
 .loan-details h2 {
-    font-size: 1em;
+    font-size: 1.2em; /* Aumenta el tamaño del título */
     margin-bottom: 8px;
 }
 
 .loan-details p {
-    font-size: 0.9em;
+    font-size: 1em; /* Aumenta el tamaño del texto */
     margin-bottom: 4px;
     color: #666;
 }
@@ -119,4 +126,19 @@ h1 {
     opacity: 0.8;
 }
 
+/* Estilos para pantallas más grandes */
+@media (min-width: 768px) {
+    .loan-item img {
+        width: 150px; /* Tamaño más grande para pantallas grandes */
+        height: 200px; /* Tamaño más grande para pantallas grandes */
+    }
+
+    .loan-details h2 {
+        font-size: 1.5em;
+    }
+
+    .loan-details p {
+        font-size: 1.1em;
+    }
+}
 
