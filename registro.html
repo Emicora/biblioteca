@@ -14,11 +14,18 @@
           <div class="titulo">
             Crear Cuenta
           </div>
-          <form id="registroform" action="login.html" method="POST">
+          <form id="registroform">
             <input type="text" name="usuario" placeholder="Usuario" required>
             <input type="email" name="email" placeholder="Correo Electrónico" required>
             <input type="password" name="password" placeholder="Contraseña" required>
-            <button type="submit" title="Registrarse" name="Registrarse">Registrarse</button>
+            <button type="submit" title="Registrarse" onclick="openPage('login.html')" name="Registrarse">Registrarse</button>
+            <script>
+                function openPage(page) {
+                    // Add your logic here to navigate to the specified page
+                    console.log("Navigating to " + page);
+                    window.location.href = page; // Redirect to the specified page
+                }
+            </script>
           </form>
           <div class="pie-form">
             <a href="login.html">¿Ya tienes cuenta? Inicia sesión</a>
