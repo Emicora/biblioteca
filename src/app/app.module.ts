@@ -5,12 +5,40 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
+import { UsersComponent } from './pages/users/users.component';
+import { UserloginComponent } from './pages/userlogin/userlogin.component';
+import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
+import { RegistroComponent } from './pages/registro/registro.component';
+import { RecuperarComponent } from './pages/recuperar/recuperar.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { LoanDetailComponent } from './pages/loan-detail/loan-detail.component';
+import { LibrarianComponent } from './pages/librarian/librarian.component';
+import { HomelistComponent } from './pages/homelist/homelist.component';
+import { BookdetailComponent } from './pages/bookdetail/bookdetail.component';
+import { BookComponent } from './pages/book/book.component';
+import { AdminComponent } from './pages/admin/admin.component';
+import { AddBookComponent } from './pages/add-book/add-book.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent,
+    UsersComponent,
+    UserloginComponent,
+    ResetPasswordComponent,
+    RegistroComponent,
+    RecuperarComponent,
+    ProfileComponent,
+    LoanDetailComponent,
+    LibrarianComponent,
+    HomelistComponent,
+    BookdetailComponent,
+    BookComponent,
+    AdminComponent,
+    AddBookComponent
   ],
   imports: [
     BrowserModule,
