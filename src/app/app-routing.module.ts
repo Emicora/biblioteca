@@ -12,9 +12,14 @@ import { LoginComponent } from './pages/login/login.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { LibrarianComponent } from './pages/librarian/librarian.component';
 import { HomesinregComponent } from './pages/homesinreg/homesinreg.component';
+import { UserloginComponent } from './pages/userlogin/userlogin.component';
+import { RegistroComponent } from './pages/registro/registro.component';
+import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
+import { HomeadminComponent } from './pages/homeadmin/homeadmin.component';
 
 const routes: Routes = [
 {path: 'home', component: HomeComponent},
+{path: 'homeadmin', component: HomeadminComponent},
 {path: 'homesinreg', component: HomesinregComponent},
 {path: '', redirectTo: 'homesinreg', pathMatch: 'full'},
 {path: 'bookdetail', component: BookdetailComponent},
@@ -27,7 +32,10 @@ const routes: Routes = [
 {path: 'login', component: LoginComponent},
 {path: 'admin', component: AdminComponent},
 {path: 'librarian', component: LibrarianComponent},
-{path: 'admin', component: AdminComponent},
+{path: 'userlogin', component: UserloginComponent},
+{path: 'registro', component: RegistroComponent},
+{path: 'reset', component: ResetPasswordComponent},
+
 
 
 
