@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #d97b73;
     height: 100vh;
     margin: 0; /* Asegúrate de que no haya margen alrededor */
     padding: 0;
@@ -8,6 +8,16 @@ body {
     justify-content: center;
     align-items: center;
 }
+    .back-btn {
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
 
 .edit-btn, .delete-btn {
     border: none;
@@ -21,7 +31,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #fff;
+    background-color: #d97b73;
     border-radius: 0; /* Elimina el borde redondeado si quieres que ocupe el ancho completo */
     box-shadow: none; /* Elimina la sombra si no es necesaria para un diseño a pantalla completa */
     overflow: hidden;
@@ -29,7 +39,7 @@ body {
 
 .header {
     text-align: center;
-    background-color: #d97b73;
+    background-color: #a7433a;
     padding: 20px;
     color: white;
     width: 100%; /* Asegúrate de que la cabecera ocupe el ancho completo */
@@ -51,9 +61,11 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border: 3px solid yellow; /* Contorno amarillo */
+    border: 3px solid rgb(248, 150, 69); /* Contorno amarillo */
 }
-
+.user-card:hover {
+    transform: scale(1.02); /* Efecto hover para agrandar ligeramente */
+}
 .user-card img {
     border-radius: 50%; /* Imagen redonda */
     width: 50px; /* Ajusta el tamaño de la imagen */

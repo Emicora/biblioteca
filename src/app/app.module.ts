@@ -20,6 +20,8 @@ import { BookComponent } from './pages/book/book.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { AddBookComponent } from './pages/add-book/add-book.component';
 import { SearchComponent } from './search/search.component';
+import { ButtonComponent } from './button/button.component';
+import { HomesinregComponent } from './pages/homesinreg/homesinreg.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { SearchComponent } from './search/search.component';
     BookComponent,
     AdminComponent,
     AddBookComponent,
-    SearchComponent
+    SearchComponent,
+    ButtonComponent,
+    HomesinregComponent
   ],
   imports: [
     BrowserModule,
