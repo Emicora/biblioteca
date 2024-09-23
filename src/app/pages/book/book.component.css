@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
+    color: #333;
 }
 
 html, body {
@@ -52,12 +53,16 @@ body {
 .book-card {
     display: flex;
     align-items: center;
-    background-color: #f49b4399;
+    background-color: white;
     margin-bottom: 20px;
     padding: 10px;
     border-radius: 15px;
     position: relative;
     width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.book-card:hover {
+    transform: scale(1.02); /* Efecto hover para agrandar ligeramente */
 }
 
 .book-card img {

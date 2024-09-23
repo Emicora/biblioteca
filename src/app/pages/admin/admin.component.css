@@ -19,7 +19,7 @@ body {
     min-width: 100vw;
     min-height: 100vh;
     width: 100%;
-    height: 100%;                                                                                                                                                  /* Añadido para centrar el contenido */                                             
+    height: 100%;  /* Añadido para centrar el contenido */                                             
 }
 
 .welcome-title {
