@@ -13,19 +13,12 @@
             <input type="password" class="input-field" placeholder="*******">
             <div class="button-container">
                 <span class="login-text">Log in</span>
-                <button class="circle-button" onclick="openPage('home.html')">></button>
+                <button class="circle-button" routerLink="/homeadmin" href="#">></button>
 
-                <script>
-                    function openPage(page) {
-                        // Add your logic here to navigate to the specified page
-                        console.log("Navigating to " + page);
-                        window.location.href = page; // Redirect to the specified page
-                    }
-                </script>
             </div>
             <div class="text-below-buttons">
-                <button  class="below-text" onclick="openPage('registro.html')">Sign Up</button>
-                <button class="below-text" onclick="openPage('recuperar.html')">Forgot Password</button>
+                <button  class="below-text" routerLink="/registro" href="#">Sign Up</button>
+                <button class="below-text" routerLink="/reset" href="#">Forgot Password</button>
             </div>
         </div>
     </div>
