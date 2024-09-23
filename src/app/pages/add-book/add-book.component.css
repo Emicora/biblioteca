@@ -11,13 +11,12 @@ html, body {
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
+    background-color: #F9B185;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center; /* Centra el contenido verticalmente */
     min-height: 100vh;
     margin: 0;
-    padding: 2rem;
 }
 
 .container {
@@ -29,6 +28,10 @@ body {
     text-align: center;
     transition: all 0.3s ease;
     max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Asegura que el contenido interno esté centrado */
 }
 
 .header h1 {
@@ -77,8 +80,8 @@ textarea.input-field {
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex: 1;
-    max-width: 45%; /* Cambié a 45% para garantizar que no se salga */
-    min-width: 35%; /* Establecí un mínimo para que no se comprima demasiado */
+    max-width: 45%; /* Máximo 45% del ancho para mantener un buen espacio */
+    min-width: 35%; /* Mínimo 35% del ancho para evitar compresión */
 }
 
 .upload-icon {
@@ -148,8 +151,8 @@ textarea.input-field {
     }
 
     .upload-box {
-        max-width: 50%; /* En pantallas más pequeñas, el ancho máximo será más reducido */
-        min-width: 40%; /* Se asegura de no comprimirse demasiado */
+        max-width: 50%; /* En pantallas pequeñas, el ancho será más reducido */
+        min-width: 40%; /* Mantener un tamaño mínimo */
     }
 
     .upload-icon {
@@ -166,4 +169,32 @@ textarea.input-field {
         font-size: 1.2rem;
         padding: 1rem 1.5rem;
     }
+}
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #d97b73; /* Color de fondo similar al que muestras */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.back-button i {
+    font-size: 24px;
+    color: white;
+}
+
+.back-button:hover {
+    background-color: #d8675d; /* Color más oscuro al hacer hover */
+}
+
+.back-button:active {
+    background-color: #d97b73; /* Color al presionar */
 }
