@@ -14,68 +14,28 @@ body {
     position: relative;
     padding-bottom: 60px; /* Espacio para el menú inferior */
 }
+
 a {
     text-decoration: none;
     color: #AD6666;
     transition: color 0.3s ease-in-out; /* Agrega una transición suave al color */
 }
 
-
 a:hover {
     filter: brightness(70%); /* Aplica un filtro de brillo para oscurecer la imagen */
     color: rgb(0, 0, 0); /* Cambia el color al pasar el mouse por encima */
 }
 
-/* Barra superior */
-.top-bar {
-    background-color: #AD6666;
-    padding: 20px;
-    text-align: center;
-    color: white;
-    position: sticky;
-    top: 0;
-}
-
-.search-container {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.search-bar {
-    width: 80%;
-    padding: 10px;
-    border-radius: 25px;
-    border: none;
-    outline: none;
-}
-
-datalist option {
-    font-size: 16px;
-    padding: 5px;
-}
-
-.search-button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 18px;
-    margin-left: -35px;
-    cursor: pointer;
-}
-
 /* Sección de categorías y libros */
 .book-section {
-    flex-grow: 1; /* Asegura que la sección central crezca según sea necesario */
+    flex-grow: 1;
     padding: 20px;
 }
 
-
-
+/* Rejilla estilo Netflix */
 .book-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Varias columnas adaptables */
     gap: 10px;
 }
 
@@ -84,10 +44,11 @@ datalist option {
 }
 
 .book-cover {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
+    width: 150px; /* Ancho fijo para las imágenes */
+    height: 220px; /* Alto fijo para las imágenes */
+    border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* Asegura que la imagen se ajuste sin distorsión */
 }
 
 .book-item p {
@@ -96,30 +57,25 @@ datalist option {
     color: #333;
 }
 
+/* Ajuste para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .book-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Ajuste de columnas en pantallas pequeñas */
+    }
 
-
-
-/* Rejilla de libros */
-.book-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adaptable a pantallas más pequeñas */
-    gap: 10px;
+    .book-cover {
+        width: 120px;
+        height: 180px;
+    }
 }
 
-.book-item {
-    text-align: center;
-}
+@media (max-width: 480px) {
+    .book-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Ajuste de columnas en pantallas muy pequeñas */
+    }
 
-.book-cover {
-    max-width: 100%; /* Evita que las imágenes se salgan de su contenedor */
-    height: auto; /* Mantiene las proporciones */
-    max-height: 300px; /* Limita la altura máxima de las imágenes */
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.book-item p {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #333;
+    .book-cover {
+        width: 100px;
+        height: 150px;
+    }
 }
